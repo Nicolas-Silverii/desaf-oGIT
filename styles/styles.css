@@ -255,7 +255,7 @@
     .grid__item {    
         text-align: center;
         background-color: rgba(194, 171, 192, 0.39);
-        border: solid black;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
        
               
     }
@@ -376,10 +376,19 @@
     }
 
 
+
+
+    /*****ANIMISTA*****/
+
+    .rotate-scale-up{-webkit-animation:rotate-scale-up .65s linear both;animation:rotate-scale-up .65s linear both}
+    
+    @-webkit-keyframes rotate-scale-up{0%{-webkit-transform:scale(1) rotateZ(0);transform:scale(1) rotateZ(0)}50%{-webkit-transform:scale(2) rotateZ(180deg);transform:scale(2) rotateZ(180deg)}100%{-webkit-transform:scale(1) rotateZ(360deg);transform:scale(1) rotateZ(360deg)}}@keyframes rotate-scale-up{0%{-webkit-transform:scale(1) rotateZ(0);transform:scale(1) rotateZ(0)}50%{-webkit-transform:scale(2) rotateZ(180deg);transform:scale(2) rotateZ(180deg)}100%{-webkit-transform:scale(1) rotateZ(360deg);transform:scale(1) rotateZ(360deg)}}
+
     /***** NOSOTROS *****/
 
 
     .gridnosotros {
+
         margin: 100px;
         padding: 100px;
         width: 90%;
@@ -387,25 +396,33 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         
     }
 
     .caja__nosotros {
+        
+        background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
         width: 50%;
         height: 90vh;
-
         display: flex; 
-        border: dashed grey;
         justify-content: stretch;
         align-items: center;
-        
+        animation: movimientonosotros;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-direction: 2; 
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    }
+
+    @keyframes movimientonosotros {
+        100% {
+        transform: rotate(360deg);        }
     }
 
 
-
     .imagen__nosotros {
-        
         height: 50%;
         margin-left: 34px;
         
